@@ -19,7 +19,7 @@ Ce projet vise à automatiser différentes tâches liées à la supervision rés
 3. **[remove_snmp_linux.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/remove_snmp_linux.yml)**
     - Automatise la suppression du service SNMP des machines Linux.
 
-4. **[password_management.yml (Linux)](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/password_management_linux.yml)**
+4. **[password_management_linux.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/password_management_linux.yml)**
     - Génère et affecte de manière aléatoire un mot de passe sur les systèmes Linux.
 
 5. **[add_snmp_windows.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/add_snmp_windows.yml)**
@@ -28,7 +28,7 @@ Ce projet vise à automatiser différentes tâches liées à la supervision rés
 6. **[remove_snmp_windows.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/remove_snmp_windows.yml)**
     - Automatise la suppression du service SNMP des machines Windows.
 
-7. **[password_management.yml (Windows)](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/password_management_windows.yml)**
+7. **[password_management_windows.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/password_management_windows.yml)**
     - Génère et affecte de manière aléatoire un mot de passe sur les systèmes Windows.
 
 8. **[add_hosts.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/add_hosts.yml)**
