@@ -1,0 +1,16 @@
+- name: deb
+  hosts: linuxTest
+  vars:
+    ansible_connection: ssh
+
+  tasks:
+   - name: SNMP
+     package:
+       name: snmpd
+       state: latest
+
+   - name: SNMP start
+     service:
+       name: snmpd
+       state: started
+       enabled: yes

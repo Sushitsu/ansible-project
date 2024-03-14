@@ -1,0 +1,13 @@
+- name: deb
+  hosts: linuxTest
+  tasks:
+   - name: SNMP stop
+     service: 
+       name: snmpd
+       state: stopped
+       enabled: no
+
+   - name: SNMP
+     package:
+       name: snmpd
+       state: absent

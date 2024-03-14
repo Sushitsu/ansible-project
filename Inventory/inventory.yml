@@ -1,0 +1,23 @@
+# AlmaLinux
+[almaLinux]
+10.10.10.2
+
+# Windows Server
+[windowsServer]
+10.10.10.3 ansible_user="Administrateur" ansible_password="Azerty69" ansible_connection=winrm ansible_winrm_server_cert_validation=ignore ansible_winrm_transport=ntlm
+
+# Linux Server
+[linuxServer]
+10.10.10.4
+
+# Linux Test
+[linuxTest]
+10.10.10.5 ansibled_user=lucas ansible_password=root
+
+# Variables globales
+#[all:vars]
+#centreon_url="http://10.10.10.2/centreon"
+#centreon_api_user="admin"
+#centreon_api_pass="Zu2B!*PU?9u6cj$8"
+#linux_template="OS-Linux-SNMP-custom"
+#windows_template="OS-Windows-SNMP-custom"

@@ -1,0 +1,62 @@
+- hosts: localhost
+  roles:
+    - role: ansible-modules-centreon
+  
+  vars:
+    centreon_url: "http://10.10.10.2/centreon"
+    centreon_api_user: "admin"
+    centreon_api_pass: "Zu2B!*PU?9u6cj$8"
+  
+  handlers:
+    - name: "Apply Centreon Configuration"
+      centreon_poller:
+        url: "{{ centreon_url }}"
+        username: "{{ centreon_api_user }}"
+        password: "{{ centreon_api_pass }}"
+      listen: "centreon api applycfg"
+  
+  tasks:
+    - name: "Add Linux Server to Centreon"
+      centreon_host:
+        url: "{{ centreon_url }}"
+        username: "{{ centreon_api_user }}"
+        password: "{{ centreon_api_pass }}"
+        name: "Linux Server"
+        ipaddr: "10.10.10.4"
+        hosttemplates:
+          - name: OS-Linux-SNMP-custom
+            state: present
+        instance: Central
+        status: enabled
+        state: present 
+      notify: "centreon api applycfg"
+
+    - name: "Add Windows Server to Centreon"
+      centreon_host:
+        url: "{{ centreon_url }}"
+        username: "{{ centreon_api_user }}"
+        password: "{{ centreon_api_pass }}"
+        name: "Windows Server"
+        ipaddr: "10.10.10.3"
+        hosttemplates:
+          - name: OS-Windows-SNMP-custom
+            state: present
+        instance: Central
+        status: enabled 
+        state: present
+      notify: "centreon api applycfg"
+    
+    - name: "Add Linux Test to Centreon"
+      centreon_host:
+        url: "{{ centreon_url }}"
+        username: "{{ centreon_api_user }}"
+        password: "{{ centreon_api_pass }}"
+        name: "Linux Test"
+        ipaddr: "10.10.10.5"
+        hosttemplates:
+          - name: OS-Linux-SNMP-custom
+            state: present
+        instance: Central
+        status: enabled
+        state: present 
+      notify: "centreon api applycfg"

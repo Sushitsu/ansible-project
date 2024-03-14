@@ -1,0 +1,24 @@
+ - name: windows
+   hosts: windowsServer
+   tasks:
+   -  name: features
+      ansible.windows.win_feature:
+        name: SNMP-Service
+        include_management_tools: yes
+        state: present
+
+   -  name: service
+      community.windows.win_snmp:
+        name: snmp
+        start_mode: auto
+        state: started
+        community_strings:
+           - public
+        permitted_managers:
+           - 10.10.10.2
+           - localhost
+        action: set
+
+   - name: reboot 
+     ansible.windows.win_reboot:
+       reboot_timeout: 300

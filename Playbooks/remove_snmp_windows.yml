@@ -1,0 +1,26 @@
+-name: win
+  hosts: windowsServer
+  tasks:
+    - name: Arrêter le service SNMP
+      win_service:
+        name: snmp
+        state: stopped
+
+    - name: Supprimer la communauté SNMP
+      win_shell: |
+        $snmpCommunity = "public"
+        $command = "reg delete HKLM\SYSTEM\CurrentControlSet\Services\SNMP\Parameters\ValidCommunities /v $snmpCommunity /f"
+        Invoke-Expression $command
+      ignore_errors: yes
+
+    - name: Supprimer l'hôte SNMP
+      win_shell: |
+        $snmpHost = "10.10.10.2" 
+        $command = "reg delete HKLM\SYSTEM\CurrentControlSet\Services\SNMP\Parameters\PermittedManagers /v $snmpHost /f"
+        Invoke-Expression $command
+      ignore_errors: yes
+
+    - name: Désinstaller le service SNMP
+      win_feature:
+        name: SNMP-Service
+        state: absent
