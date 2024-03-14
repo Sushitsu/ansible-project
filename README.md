@@ -10,7 +10,7 @@ Ce projet vise à automatiser différentes tâches liées à la supervision rés
 
 ## Description des Playbooks
 
-1. **[Inventory.yml](https://github.com/sushitsu/ansible-project/Inventory/Inventory.yml)**
+1. **[Inventory.yml](Inventory/Inventory.yml)**
     - Crée un inventaire des machines à superviser.
 
 2. **[add_snmp_linux.yml](https://github.com/sushitsu/ansible-project/Playbooks/add_snmp_linux.yml)**
