@@ -1,46 +1,46 @@
-# Projet Netmonitoring
+# Netmonitoring Project
 
 ## Description
-Ce projet vise à automatiser différentes tâches liées à la supervision réseau et à la gestion des serveurs au sein d'une infrastructure. En utilisant Ansible, nous automatisons l'installation et la configuration du service SNMP sur les machines Linux et Windows, ainsi que l'ajout de ces machines à la supervision via Centreon. De plus, nous gérons de manière automatisée la génération et l'affectation de mots de passe sur les systèmes Linux et Windows.
+This project aims to automate various tasks related to network monitoring and server management within an infrastructure. By using Ansible, we automate the installation and configuration of SNMP service on both Linux and Windows machines, as well as adding these machines to monitoring via Centreon. Additionally, we manage password generation and assignment on Linux and Windows systems in an automated manner.
 
-## Objectifs
-- Automatiser l'installation et la configuration du service SNMP sur Linux et Windows.
-- Automatiser l'ajout des machines Linux et Windows à la supervision via Centreon.
-- Automatiser la gestion des mots de passe sur les systèmes Linux et Windows.
+## Objectives
+- Automate the installation and configuration of SNMP service on Linux and Windows.
+- Automate the addition of Linux and Windows machines to monitoring via Centreon.
+- Automate password management on Linux and Windows systems.
 
-## Description des Playbooks
+## Playbooks Description
 
 1. **[Inventory.yml](https://github.com/Sushitsu/ansible-project/blob/master/Inventory/inventory.yml)**
-    - Crée un inventaire des machines à superviser.
+    - Creates an inventory of machines to monitor.
 
 2. **[add_snmp_linux.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/add_snmp_linux.yml)**
-    - Automatise l'installation et la configuration du service SNMP sur les machines Linux.
+    - Automates the installation and configuration of SNMP service on Linux machines.
 
 3. **[remove_snmp_linux.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/remove_snmp_linux.yml)**
-    - Automatise la suppression du service SNMP des machines Linux.
+    - Automates the removal of SNMP service from Linux machines.
 
 4. **[password_management_linux.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/password_management_linux.yml)**
-    - Génère et affecte de manière aléatoire un mot de passe sur les systèmes Linux.
+    - Generates and assigns passwords randomly on Linux systems.
 
 5. **[add_snmp_windows.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/add_snmp_windows.yml)**
-    - Automatise l'installation et la configuration du service SNMP sur les machines Windows.
+    - Automates the installation and configuration of SNMP service on Windows machines.
 
 6. **[remove_snmp_windows.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/remove_snmp_windows.yml)**
-    - Automatise la suppression du service SNMP des machines Windows.
+    - Automates the removal of SNMP service from Windows machines.
 
 7. **[password_management_windows.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/password_management_windows.yml)**
-    - Génère et affecte de manière aléatoire un mot de passe sur les systèmes Windows.
+    - Generates and assigns passwords randomly on Windows systems.
 
 8. **[add_hosts.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/add_hosts.yml)**
-    - Automatise l'ajout des hôtes à Centreon pour la supervision.
+    - Automates the addition of hosts to Centreon for monitoring.
 
 9. **[remove_hosts.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/remove_hosts.yml)**
-    - Automatise la suppression des hôtes de Centreon.
+    - Automates the removal of hosts from Centreon.
 
 ## Commandes pour exécuter les Playbooks
 
-- Pour exécuter un playbook Ansible, utilisez la commande suivante :
+- To execute an Ansible playbook, use the following command:
 
   **ansible-playbook { inventory } { playbook }**
 
-Assurez-vous d'avoir correctement configuré votre environnement Ansible avec les fichiers d'inventaire appropriés et les informations de connexion aux machines cibles avant d'exécuter les playbooks.
+Make sure you have correctly configured your Ansible environment with appropriate inventory files and connection information to target machines before running the playbooks.
