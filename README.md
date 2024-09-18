@@ -46,6 +46,6 @@ This project aims to automate various tasks related to network monitoring and se
 
 - To execute an Ansible playbook, use the following command:
 
-  **ansible-playbook { inventory } { playbook }**
+  **_ansible-playbook { inventory } { playbook }_**
 
 Make sure you have correctly configured your Ansible environment with appropriate inventory files and connection information to target machines before running the playbooks.
