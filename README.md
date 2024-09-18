@@ -1,6 +1,11 @@
-# Netmonitoring Project
+<div align="center">
+      <h1>Netmonitoring Project</h1>
+     </div>
+<p align="center"> <a href="https://www.linkedin.com/in/lucasferrand/}" target="_blank"><img alt="" src="https://img.shields.io/badge/LinkedIn-0077B5?style=normal&logo=linkedin&logoColor=white" style="vertical-align:center" /></a> </p>
 
-## Description
+<br>
+
+## :zap: Description
 This project aims to automate various tasks related to network monitoring and server management within an infrastructure. By using Ansible, we automate the installation and configuration of SNMP service on both Linux and Windows machines, as well as adding these machines to monitoring via Centreon. Additionally, we manage password generation and assignment on Linux and Windows systems in an automated manner.
 
 ## Objectives
