@@ -13,7 +13,7 @@ This project aims to automate various tasks related to network monitoring and se
 - Automate the addition of Linux and Windows machines to monitoring via Centreon.
 - Automate password management on Linux and Windows systems.
 
-## Playbooks Description
+## :cactus: Playbooks Description
 
 1. **[Inventory.yml](https://github.com/Sushitsu/ansible-project/blob/master/Inventory/inventory.yml)**
     - Creates an inventory of machines to monitor.
@@ -42,7 +42,7 @@ This project aims to automate various tasks related to network monitoring and se
 9. **[remove_hosts.yml](https://github.com/Sushitsu/ansible-project/tree/master/Playbooks/remove_hosts.yml)**
     - Automates the removal of hosts from Centreon.
 
-## Commandes pour exécuter les Playbooks
+## :electric_plug: Commands for running Playbooks
 
 - To execute an Ansible playbook, use the following command:
 
