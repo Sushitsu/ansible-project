@@ -8,12 +8,12 @@
 ## :zap: Description
 This project aims to automate various tasks related to network monitoring and server management within an infrastructure. By using Ansible, we automate the installation and configuration of SNMP service on both Linux and Windows machines, as well as adding these machines to monitoring via Centreon. Additionally, we manage password generation and assignment on Linux and Windows systems in an automated manner.
 
-## Objectives
+##  Objectives
 - Automate the installation and configuration of SNMP service on Linux and Windows.
 - Automate the addition of Linux and Windows machines to monitoring via Centreon.
 - Automate password management on Linux and Windows systems.
 
-## :cactus: Playbooks Description
+## :file_folder: Playbooks Structure
 
 1. **[Inventory.yml](https://github.com/Sushitsu/ansible-project/blob/master/Inventory/inventory.yml)**
     - Creates an inventory of machines to monitor.
