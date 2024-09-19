@@ -47,6 +47,11 @@ This project aims to automate various tasks related to network monitoring and se
 
 <br>
 
+## :hammer: Tech Used 
+![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)
+
+<br>
+
 ## :electric_plug: Commands for running Playbooks
 - To execute an Ansible playbook, use the following command:
 
